@@ -32,6 +32,6 @@ if st.button("Prediksi Income"):
         predicted_income = model.predict(new_data_df)
 
         # Tampilkan hasil prediksi
-        st.success(f"Prediksi Income adalah: ${predicted_income[0]:,.2f}")
+        st.success(f"Prediksi Income adalah: ${predicted_income.item():,.2f}")
     except Exception as e:
         st.error(f"Terjadi kesalahan saat melakukan prediksi: {e}")
